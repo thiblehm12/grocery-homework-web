@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+   <link rel="stylesheet" href="style2.css">
+
+    <title>Contact</title>
+   </head>
+<body>
+    <h1>Sign in</h1>
+    <form id = "contact" method="post" action="alcohol.php" >
+<!----------------------NAME--------------------->
+        <input placeholder="Your Name" type="text" name="name" required><br><br>
+<!----------------------SURNAME------------------>
+        <input placeholder="Your Surname" type="text" name="surname" required>
+        <br><br>
+<!----------------------EMAIL--------------------->
+        <input placeholder="Your Email Address" type="text" name="adress" required><br><br>
+<!----------------------CITY--------------------->
+         <label for="city">Choose a city :</label>
+         <select id="city" name="city" required>
+             <option value="Empty"> </option>
+             <option value="Vilnius">Vilnius</option>
+             <option value="Riga">Riga</option>
+             <option value="Tallinn">Tallinn</option>
+             <option value="Helsinki">Helsinki</option>
+        </select>
+        <br><br>
+<!----------------------GENDER--------------------->
+       Gender:
+        <input type="radio" name="gender"
+        value="female" required>Female
+        <input type="radio" name="gender"
+        value="male">Male
+        <input type="radio" name="gender"
+        value="other">Other
+        <br/><br/>
+<!----------------------HOBBY----------------------->
+<!--        <?php-->
+<!--        $error = array();-->
+<!--            if(!empty($_POST)){-->
+<!--                if(empty($_POST['hobby'])){-->
+<!--                    $error['hobby']=1;-->
+<!--                if(empty($_POST['name']))-->
+<!--                     error['name']=1;-->
+<!--                }-->
+<!--            }-->
+<!--        ?>-->
+
+
+          <label for="hobby">Choose a hobby:</label>
+          <select id="hobby" name="hobby" size="4" multiple>
+              <option value="Empty"> </option>
+              <option value="Biking">Biking</option>
+              <option value="Hiking">Hiking</option>
+              <option value="Swimming">Swimming</option>
+              <option value="Riding">Riding</option>
+          <br>
+
+<!--        <?php-->
+<!--            if($error_hobby){-->
+<!--                echo 'You need to select at least one hobby';-->
+<!--            }-->
+<!--        ?>-->
+
+          </select>
+          <br><br>
+<!----------------------MESSAGE--------------------->
+             <textarea id="message" name="message" placeholder="Type your message here..." rows="5" cols="25" required></textarea>
+
+        <br/><br/>
+        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+        <input id="btn" type = "button" value = "Return"  onclick = "history.go(-1)">
+    </form>
+</body>
+</html>
+
+
+<!--<?php-->
+<!--//FORM VALIDATION using php & html-->
+<!--//First, last names - at least 2 simbols (text)-->
+<!--//Password - at least 8 simbols with some numbers (at least 1 number)-->
+
+<!--//Checking for errors:-->
+<!--$error = array();-->
+<!--if(!empty($_POST)) {-->
+<!--	if(empty($_POST['Hobby']) {-->
+<!--		$error['hobby'] = 1;-->
+<!--	}-->
+<!--	if(empty(trim($_POST['first_name'])) {-->
+<!--		$error['first_name'] = 1;-->
+<!--	}-->
+<!--}-->
+
+<!--//Supporting data (in future it will come from databases):-->
+<!--$hobbies = array();-->
+<!--$hobbies['fis'] = 'Fishing';-->
+<!--$hobbies['drv'] = 'Driving';-->
+
+<!--$cities = array();-->
+<!--$cities['vln'] = 'Vilnius';-->
+<!--$cities['kns'] = 'Kaunas';-->
+
+<!--	if(empty($_POST) || !empty($error)) {-->
+<!--	//show your input form-->
+<!--?>-->
+<!--		<form method="post" action="">-->
+<!--		<?php-->
+<!--			if(!empty($error['first_name'])) {-->
+<!--				echo 'You need to enter name';-->
+<!--			}-->
+<!--		?>-->
+<!--		<input type="text" name="first_name" required>-->
+<!--		<?php-->
+<!--			if(!empty($error['hobby'])) {-->
+<!--				echo 'You need to select at least one hobby';-->
+<!--			}-->
+
+<!--			foreach($hobbies as $hobby_id=>$hobby_value) {-->
+<!--				echo '<checkbox name="Hobby['.$hobby_id.']"> '.$hobby_value;-->
+<!--			}-->
+
+<!--?>-->
+<!--		</form>-->
+<!--<?php-->
+<!--	} else {-->
+<!--		if(!empty($_POST) && empty($error)) {-->
+<!--			//show your result page-->
+<!--			//connect to database and will add data to it-->
+<!--		}-->
+<!--?>-->
+

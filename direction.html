@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+   <link rel="stylesheet" href="css/style2.css">
+
+    <title>Security</title>
+   </head>
+<body>
+    <h1>To enter on the alcohol page, you must file the following form</h1>
+    <form id = "contact" method="post" action="answer.php" >
+<!----------------------NAME--------------------->
+        <input placeholder="Your Name" type="text" name="name" required><br><br>
+<!----------------------SURNAME------------------>
+        <input placeholder="Your Surname" type="text" name="surname" required>
+        <br><br>
+
+<!----------------------BIRTH--------------------->
+    <label for="age">Birth</label>
+
+    <input type="date" id="age" name="age">
+
+<!----------------------BUTTONS--------------------->
+        <br><br>
+        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+        <input id="btn" type = "button" value = "Return"  onclick = "history.go(-1)">
+    </form>
+</body>
+</html>
